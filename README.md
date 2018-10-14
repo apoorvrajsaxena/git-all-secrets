@@ -127,6 +127,7 @@ Above, I am scanning only the private repositories of the user whose token is pr
 
 
 ## TODO
+* Add Url Extraction functionality
 * Test team scanning functionality
 * ~~Fix the Goroutine bug~~ - Hopefully DONE!
 * ~~Support scanning Github Enterprise~~ DONE!
@@ -165,7 +166,7 @@ So, as you can see, there are decent tools out there, but they had to be combine
 ### Changelog
 * 7/31/18 - Made trugglehog's installation simpler by using `pip`. @mhmdiaa fixed a bug wrt trufflehog's output function where it wasn't merging and sorting properly. Updated the regex file to include things like `password`. Built and pushed a new Docker image. GLHF!
 
-* 7/15/18 - Updated repo-supervisor's fork because the upstream had some changes. Rebuilt a new Docker image using the latest Trufflehog. Provided the rules.json file that contains all the regexes that Trufflehog uses to find secrets. Added the ability to also merge outputs (in json) for both the tools using the `-mergeOutput` flag. Drastically reduced the Docker image size by using multi-stage builds and dep for managing dependencies. Huge shout out to @mhmdiaa for all of this! 
+* 7/15/18 - Updated repo-supervisor's fork because the upstream had some changes. Rebuilt a new Docker image using the latest Trufflehog. Provided the rules.json file that contains all the regexes that Trufflehog uses to find secrets. Added the ability to also merge outputs (in json) for both the tools using the `-mergeOutput` flag. Drastically reduced the Docker image size by using multi-stage builds and dep for managing dependencies. Huge shout out to @mhmdiaa for all of this!
 
 * 12/12/17 - For some large repos, truffleHog fails and exits. But, we don't want to stop there. We want to notify the user that scanning failed for that repo and continue scanning the other repos. This is now implemented in the latest docker image.
 
